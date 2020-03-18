@@ -1,6 +1,7 @@
 package _kyu
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -58,4 +59,20 @@ func TestValidateSolution(t *testing.T) {
 	}
 
 	t.Log(ValidateSolution(sudoku))
+}
+
+func TestMultipleOf3RegexFunc(t *testing.T) {
+	for i := 0; i < 10000; i++ {
+		str := convertToBin(i)
+
+		matched := MultipleOf3RegexFunc(str)
+
+		if matched {
+			fmt.Printf("i=%d, str=%s\r\n", i, str)
+		}
+
+		if i%3 == 0 && matched == false {
+			fmt.Printf("false,i=%d, str=%s\r\n", i, str)
+		}
+	}
 }

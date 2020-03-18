@@ -17,3 +17,15 @@ func TestAlphanumeric(t *testing.T) {
 func TestProductFib(t *testing.T) {
 	t.Log(ProductFib(8))
 }
+
+func TestCreateSpiral(t *testing.T) {
+	result := CreateSpiral(0)
+
+	for _, items := range result {
+		t.Log(items)
+	}
+}
+
+func TestJosephus(t *testing.T) {
+	t.Log(Josephus([]interface{}{1, 2, 3, 4, 5, 6, 7}, 3))
+}

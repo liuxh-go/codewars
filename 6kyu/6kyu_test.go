@@ -1,6 +1,8 @@
 package _kyu
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestMultiple3And5(t *testing.T) {
 	t.Log(Multiple3And5(10))
